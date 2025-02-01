@@ -1,0 +1,15 @@
+playbook "My Workshop" {
+    description: "Example workshop"
+    purpose: "Testing syntax highlighting"
+
+    phase "Introduction" {
+        session "Welcome" {
+            duration: 30
+            
+            activity "Icebreaker" {
+                type: information
+                description: "Get to know each other"
+            }
+        }
+    }
+} 

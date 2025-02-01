@@ -1,0 +1,44 @@
+{
+  "name": "wowlang",
+  "displayName": "WowLang",
+  "description": "Language support for WowLang playbook files",
+  "version": "0.0.1",
+  "publisher": "Beach.io",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beachio/wowlang-vscode"
+  },
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "wowlang",
+      "aliases": ["WowLang", "wowlang"],
+      "extensions": [".wow", ".wowlang"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "wowlang",
+      "scopeName": "source.wowlang",
+      "path": "./syntaxes/wowlang.tmLanguage.json"
+    }]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "echo 'No compilation needed'",
+    "watch": "echo 'No watch needed'",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/node": "^14.x.x",
+    "@types/mocha": "^8.2.2",
+    "mocha": "^8.4.0",
+    "vscode-test": "^1.5.2"
+  }
+} 

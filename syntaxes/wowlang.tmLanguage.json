@@ -1,0 +1,57 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "WowLang",
+  "scopeName": "source.wowlang",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#properties"
+    },
+    {
+      "include": "#types"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [{
+        "name": "keyword.control.wowlang",
+        "match": "\\b(playbook|phase|session|activity|tool|beforeSession|afterSession|activities)\\b"
+      }]
+    },
+    "strings": {
+      "name": "string.quoted.double.wowlang",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.wowlang",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "numbers": {
+      "name": "constant.numeric.wowlang",
+      "match": "\\b[0-9]+\\b"
+    },
+    "properties": {
+      "patterns": [{
+        "name": "support.type.property-name.wowlang",
+        "match": "\\b(description|purpose|suggestedDuration|name|duration|type|required|format|formType)\\s*:"
+      }]
+    },
+    "types": {
+      "patterns": [{
+        "name": "support.type.wowlang",
+        "match": "\\b(information|feedback|reflection|summary|action)\\b"
+      }]
+    }
+  }
+} 
